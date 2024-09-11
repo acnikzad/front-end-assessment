@@ -1,10 +1,10 @@
-import './App.css'
-import Header from './components/header'
+import "./App.css";
+import CardGame from "./pages/cardGame";
 
 const App = () => (
-    <>
-      <Header />
-    </>
-)
+  <>
+    <CardGame />
+  </>
+);
 
-export default App
+export default App;
