@@ -152,6 +152,7 @@ const CardGame: React.FC = () => {
     displayGreeting
   );
 
+  // Custom reusable hook to handle the showHint behavior
   const showHint = useShowHint(cards, setCards, hintsLeft, setHintsLeft);
 
   const resetGame = () => {
@@ -192,15 +193,15 @@ const CardGame: React.FC = () => {
         </button>
       </div>
       <CardGrid
-        cards={cards} //card state is passed in as a prop
-        handleCardClick={handleCardClick} //handleCardClick function is in parent and passed in as a prop to the child
-        category={category} //selected category is passed in
+        cards={cards}
+        handleCardClick={handleCardClick}
+        category={category}
       />
       <Modal
-        show={showModal} //state behavior for the modal
-        score={score} // score passed in to display
-        onClose={() => setShowModal(false)} //state behavior for the modal
-        onReset={resetGame} //reset function passed in to replay game
+        show={showModal}
+        score={score}
+        onClose={() => setShowModal(false)}
+        onReset={resetGame}
       />
     </div>
   );
