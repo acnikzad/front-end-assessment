@@ -1,5 +1,6 @@
 # Overview
 
+- git clone https://github.com/acnikzad/front-end-assessment
 - npm install
 - npm start
 
