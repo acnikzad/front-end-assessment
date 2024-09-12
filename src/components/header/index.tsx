@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from "react";
 import "./../../styles/header.css";
 
 type HeaderProps = {
   resetGame: () => void;
   moves: number;
   score: number;
+  time: number;
 };
 
-const Header: React.FC<HeaderProps> = ({ resetGame, moves, score }) => {
-  const [time, setTime] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => setTime(time + 1), 1000);
-    return () => clearInterval(timer);
-  }, [time]);
-
+const Header: React.FC<HeaderProps> = ({ resetGame, moves, score, time }) => {
   return (
     <header className="header">
       <div className="logo">

@@ -168,7 +168,7 @@ const CardGame: React.FC = () => {
 
   return (
     <div>
-      <Header resetGame={resetGame} moves={moves} score={score} />
+      <Header resetGame={resetGame} moves={moves} score={score} time={time} />
       <div>
         <label htmlFor="category">Choose a category: </label>
         <select
